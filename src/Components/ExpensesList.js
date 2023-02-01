@@ -6,7 +6,10 @@ import Expense from "./Expense";
 export default function ExpensesList({ transactions, deleteTransaction }) {
   return (
     <>
-      <h3 className="expenselist title">List of all Expenses</h3>
+      <Link to="/add">
+        <button className="explink">Add an Expense</button>
+      </Link>
+      <h3 className="expenselist">List of all Expenses</h3>
       <ul className="list">
         {transactions.map((transaction) => (
           <Expense
@@ -16,9 +19,6 @@ export default function ExpensesList({ transactions, deleteTransaction }) {
           />
         ))}
       </ul>
-      <div className="Add Expense Link">
-        <Link to="/add">Add an Expense</Link>
-      </div>
     </>
   );
 }

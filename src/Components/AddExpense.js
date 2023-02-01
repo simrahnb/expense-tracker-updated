@@ -22,10 +22,10 @@ export default function AddExpense({ addTransaction }) {
 
   return (
     <>
-      <h3>Add a New Expense</h3>
+      <h3 className="minus">Add a New Expense</h3>
       <form onSubmit={onSubmit}>
         <div className="form-control">
-          <label htmlFor="text">Text</label>
+          <label htmlFor="text">Name</label>
           <input
             type="text"
             value={text}

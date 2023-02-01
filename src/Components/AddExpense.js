@@ -1,9 +1,11 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function AddExpense({ addTransaction }) {
   const [text, setText] = useState("");
   const [amount, setAmount] = useState(0);
+  const navigate = useNavigate();
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -13,7 +15,9 @@ export default function AddExpense({ addTransaction }) {
       text,
       amount: +amount, // turn string to number
     };
+
     addTransaction(newTransaction);
+    navigate("/");
   };
 
   return (

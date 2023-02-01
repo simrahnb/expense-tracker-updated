@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Expense from "./Expense";
 
@@ -15,6 +16,9 @@ export default function ExpensesList({ transactions, deleteTransaction }) {
           />
         ))}
       </ul>
+      <div className="Add Expense Link">
+        <Link to="/add">Add an Expense</Link>
+      </div>
     </>
   );
 }

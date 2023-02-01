@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 
 // Components
 import { Header } from "./Components/Header";
@@ -27,16 +28,27 @@ function App() {
 
   return (
     <>
-      <Header />
-      <div className="cont">
-        <Balance transactions={transactions} />
-        <Expenses transactions={transactions} />
-        <ExpensesList
-          transactions={transactions}
-          deleteTransaction={deleteTransaction}
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={
+            <>
+              <Header />
+              <Balance transactions={transactions} />
+              <Expenses transactions={transactions} />
+              <ExpensesList
+                transactions={transactions}
+                deleteTransaction={deleteTransaction}
+              />
+            </>
+          }
         />
-        <AddExpense addTransaction={addTransaction} />
-      </div>
+        <Route
+          path="/add"
+          element={<AddExpense addTransaction={addTransaction} />}
+        />
+      </Routes>
     </>
   );
 }

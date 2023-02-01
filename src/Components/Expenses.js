@@ -1,7 +1,7 @@
 export default function Expenses({ transactions, deleteTransaction }) {
   const amounts = transactions.map((transaction) => transaction.amount);
 
-  const income = amounts
+  const salary = amounts
     .filter((item) => item > 0)
     .reduce((acc, item) => (acc += item), 0);
 

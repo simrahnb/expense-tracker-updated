@@ -5,15 +5,16 @@ export default function Balance({ transactions }) {
 
   return (
     <>
-      <h4>Your Wallet value</h4>
-      <h1 className={total < 0 ? "minus" : "plus"}>${total}</h1>
-      <div>
-        {total < 0 && (
-          <h3 className="minus">
-            {" "}
-            Your expenses have exceeded your wallet value!
-          </h3>
-        )}
+      <div className="minus">
+        <h3>Your Wallet value</h3>
+        <h1 className={total < 0 ? "minus" : "plus"}>${total}</h1>
+        <div>
+          {total < 0 && (
+            <h3 className="money minus">
+              Your expenses have exceeded your wallet value!
+            </h3>
+          )}
+        </div>
       </div>
     </>
   );

@@ -9,7 +9,7 @@
 }
 
 .center {
-  margin: auto;
+  margin: 10px 0px 70px 30px;
   width: 35%;
   padding: 10px;
 }
@@ -75,6 +75,9 @@ h4 {
 
 .plus {
   color: #0c7136;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
 }
 
 .minus {
@@ -86,7 +89,7 @@ h4 {
 
 .money.minus {
   color: #aa1707;
-  font-size: 30px;
+  font-size: 20px;
   letter-spacing: 1px;
   margin: 5px 0;
 }
@@ -125,15 +128,27 @@ input[type="number"] {
 }
 
 .list {
-  list-style-type: none;
+  list-style-type: arabic-indic;
   padding: 0;
   margin-bottom: 40px;
+  font-style: italic;
 }
 
-.list li {
-  background-color: #fff;
+.list li.plus {
+  background-color: rgb(241, 253, 241);
   box-shadow: var(--box-shadow);
-  color: #333;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li.minus {
+  background-color: rgb(255, 226, 226);
+  box-shadow: var(--box-shadow);
+  color: black;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -143,10 +158,12 @@ input[type="number"] {
 
 .list li.plus {
   border-right: 5px solid #0c7136;
+  border-left: 5px solid #0c7136;
 }
 
 .list li.minus {
   border-right: 5px solid #aa1707;
+  border-left: 5px solid #aa1707;
 }
 
 .delete-btn {
@@ -167,4 +184,10 @@ input[type="number"] {
 
 .list li:hover .delete-btn {
   opacity: 1;
+}
+
+.expenselist{
+  font-size: 22px;
+  letter-spacing: 1px;
+  text-align: center;
 }
